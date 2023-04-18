@@ -1,0 +1,170 @@
+@import "var";
+@import "mixins";
+
+// /* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+// *{
+//         margin: 0;
+//         padding: 0;
+//         box-sizing: border-box;
+// }
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: $fontFamily1;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+// article>*+* {
+//         margin-top: 1em;
+// }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  @include breakpoint(phone) {
+    width: 90%;
+  }
+  @include breakpoint(phone) {
+    width: 95%;
+  }
+}
+
+.py {
+  padding: 60px 0 90px;
+
+  @media (max-width: 1300px) {
+    padding: 40px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 0;
+  }
+}
+
+.btn {
+  display: inline-block;
+  background-color: $color4;
+  color: white;
+  border: 1px solid $color4;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 30px;
+  overflow: hidden;
+  margin: 10px 0;
+  border-radius: 50px;
+  cursor: pointer;
+  // transition: $transition;
+  &:hover {
+    color: $color4;
+    background-color: $color3;
+    border: 1px solid $color4;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section__title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  background-color: rgba($black, 0.2);
+  color: $white;
+}
+
+  .nav__mobile-logo {
+    width: 180px;
+    @include breakpoint(tablet) {
+      width: 130px;
+    }
+    @include breakpoint(phone) {
+      width: 130px;
+    }
+    &:hover {
+      opacity: 0.4;
+    }
+  }

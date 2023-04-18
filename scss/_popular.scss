@@ -1,0 +1,71 @@
+@import "var";
+@import "mixins";
+
+$fontFamily1: "Edu NSW ACT Foundation", cursive;
+$fontFamily2: "Cookie", cursive;
+
+$color1: #06aed5;
+$color2: #086788;
+$color3: #f2f4f3;
+$color4: #f0c808;
+$colorFont: #436e53;
+$white: #fff;
+$black: #000;
+$spacing: 0.1rem;
+$transition: all 0.3s linear;
+
+.popular {
+  background-image: url(../img/nova.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 180px 0;
+  @include breakpoint(phone) {
+    background-position: -230px 0;
+  }
+}
+
+.popular__wraper {
+  position: relative;
+
+  .badge {
+    right: unset;
+    left: 0;
+  }
+
+  .section__title {
+    text-align: left;
+    @include breakpoint(tablet) {
+      margin-top: 35px;
+    }
+    @include breakpoint(phone) {
+      margin-top: 35px;
+    }
+  }
+
+  .popular__text-p {
+    margin: 35px 0;
+    max-width: 450px;
+    font-size: 1.2rem;
+  }
+
+  .popular__text-ingredients {
+    display: flex;
+    margin-bottom: 70px;
+    @include breakpoint(phone) {
+      display: block;
+    }
+    span {
+      font-weight: bold;
+    }
+    ul {
+      margin-top: 20px;
+    }
+    .popular__text-ul2 {
+      margin-left: 150px;
+      @include breakpoint(phone) {
+        margin-top: 35px;
+        margin-left: unset;
+      }
+    }
+  }
+}

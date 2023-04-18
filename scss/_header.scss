@@ -1,0 +1,237 @@
+@import "var";
+@import "mixins";
+
+$color1: #06aed5;
+$color2: #086788;
+$color3: #f2f4f3;
+$color4: #f0c808;
+$colorFont: #96b7a2;
+$white: #f0f0f0;
+$spacing: 0.1rem;
+$transition: all 0.3s linear;
+
+/* NAVBAR */
+
+/* NAVBAR MOBILE*/
+header {
+  height: 100vh;
+  @include breakpoint(tablet) {
+    height: auto;
+  }
+  @include breakpoint(phone) {
+    height: auto;
+  }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url(../img/header.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: $white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include breakpoint(tablet) {
+    display: block;
+  }
+  @include breakpoint(phone) {
+    display: block;
+  }
+  .nav__links {
+    display: flex;
+    font-size: 1.75rem;
+    text-transform: capitalize;
+    letter-spacing: $spacing;
+    padding: 0.5rem 1rem;
+    transition: $transition;
+
+    @include breakpoint(tablet) {
+      height: 0;
+      overflow: hidden;
+      transition: $transition;
+      display: block;
+    }
+    @include breakpoint(phone) {
+      height: 0;
+      overflow: hidden;
+      transition: $transition;
+      display: block;
+    }
+
+    .nav__single-link {
+      a {
+        &::after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 2px;
+          background: $color4;
+          transition: $transition;
+          margin-top: 15px;
+        }
+        &:hover::after {
+          width: 100%;
+          transition: $transition;
+        }
+        &:hover {
+          opacity: 0.4;
+        }
+      }
+      &:not(:last-child) {
+        margin-right: 1.75rem;
+      }
+      @include breakpoint(tablet) {
+        margin-bottom: 20px;
+      }
+      @include breakpoint(phone) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .show__links {
+    height: auto;
+  }
+}
+
+.nav__links-btn {
+  display: none;
+  @include breakpoint(tablet) {
+    display: block;
+  }
+  @include breakpoint(phone) {
+    display: block;
+  }
+}
+
+.nav__mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // .nav__mobile-logo {
+  //   width: 180px;
+  //   @include breakpoint(tablet) {
+  //     width: 130px;
+  //   }
+  //   @include breakpoint(phone) {
+  //     width: 130px;
+  //   }
+  //   &:hover {
+  //     opacity: 0.4;
+  //   }
+  // }
+}
+
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.show-links {
+  height: 100vh;
+}
+
+/* CONTENT */
+
+.header-content {
+  margin-top: 55px;
+  @include breakpoint(phone){
+    text-align: center;
+  }
+  h1 {
+    font-size: 4.5rem;
+    @include breakpoint(tablet) {
+      font-size: 3.7rem;
+    }
+    @include breakpoint(phone) {
+      font-size: 3rem;
+    }
+  }
+
+  p {
+    font-size: 1.6rem;
+    max-width: 400px;
+    line-height: 40px;
+    margin: 50px 0;
+    @include breakpoint(phone) {
+      max-width: unset;
+      font-size: 1.4rem;
+      line-height: 38px;
+    }
+  }
+  @include breakpoint(tablet) {
+    .btn {
+      margin-bottom: 100px;
+    }
+  }
+  @include breakpoint(phone) {
+    .btn {
+      margin-bottom: 100px;
+    }
+  }
+}
+
+/* MENU BURGER */
+
+.nav__btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  display: none;
+
+  @include breakpoint(tablet) {
+    display: block;
+  }
+  @include breakpoint(phone) {
+    display: block;
+  }
+  .nav__btn-burger {
+    width: 40px;
+    height: 4px;
+    background: $white;
+    border-radius: 50px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav__btn-burger::before,
+  .nav__btn-burger::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: $colorFont;
+    border-radius: 50px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav__btn-burger::after {
+    transform: translate(20px, 10px);
+    width: 20px;
+  }
+
+  .nav__btn-burger::before {
+    transform: translateY(-10px);
+  }
+}
+
+/* ANIMATION */
+
+.nav__btn.open .nav__btn-burger {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.nav__btn.open .nav__btn-burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.nav__btn.open .nav__btn-burger::after {
+  width: 40px;
+  transform: rotate(-45deg) translate(35px, 35px);
+}

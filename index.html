@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Designer</title>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="container">
+        <nav>
+          <div class="nav__mobile">
+            <div class="nav__mobile-logo">
+              <a href="index.html">
+                <img src="img/logo-white.png" alt="logo" />
+              </a>
+            </div>
+
+            <div class="nav__btn">
+              <div class="nav__btn-burger"></div>
+            </div>
+          </div>
+          <ul class="nav__links">
+            <li class="nav__single-link"><a href="index.html">Home</a></li>
+            <li class="nav__single-link">
+              <a href="#chiefInspiration">Chief Inspiration</a>
+            </li>
+            <li class="nav__single-link"><a href="#recipe">Recipes</a></li>
+            <li class="nav__single-link"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-content">
+          <h1>It's time for Cooking !</h1>
+          <p>
+            Do you want get something delicious, special and helthy? We are
+            sinecerly for you service. Welcome your arival!
+          </p>
+          <button class="btn" type="button" id="modalBTN">
+            recipe of the day
+            <i class="fab fa-google-play"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- modal -->
+    <div class="modal__overlay">
+      <div class="modal__container">
+        <i class="far fa-times-circle modal__btn"></i>
+        <iframe
+          width="100%"
+          height="100%"
+          id="video"
+          src="https://www.youtube.com/embed/EtK-3D9cy6w"
+          title="Domaćinske Priče: Brodet od razne ribe sa presnom pogačom - 13.05.2022."
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    <!-- TAB SECTION -->
+    <section id="chiefInspiration" class="tab container py">
+      <h2 class="section__title">We offer you Best & Delicious food</h2>
+      <p class="tab__subtitle">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      </p>
+      <!-- tab container -->
+      <div class="tab__container">
+        <!-- tab header -->
+        <div class="tab__header">
+          <button class="tab__btn tab__active" data-target-tab="#breakfast">
+            Breakfast
+          </button>
+          <button class="tab__btn" data-target-tab="#lunch">Lunch</button>
+          <button class="tab__btn" data-target-tab="#dinner">Dinner</button>
+        </div>
+        <!-- tab content -->
+        <div class="tab__body">
+          <!-- first tab -->
+          <div class="tab__content tab__active" id="breakfast">
+            <div class="tab__content-holder">
+              <div class="tab__content-text">
+                <h3>
+                  Our Best <br />
+                  Breakfast recipes
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias dignissimos sequi eaque quos fugiat reprehenderit
+                  vitae tempora quas expedita voluptas.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt esse sint fugiat illo porro, accusamus voluptatum
+                  temporibus perferendis ex, ipsum amet voluptas alias minima
+                  doloribus doloremque tempora culpa id libero!
+                </p>
+                <!-- <button class="btn">
+                  <a href="recipe.html">Go to recipes</a>
+                </button> -->
+                <a href="recipe.html" class="btn">Go to recipes</a>
+              </div>
+              <div class="tab__content-image">
+                <img src="img/breakfast1.jpg" alt="breakfast" />
+              </div>
+            </div>
+          </div>
+          <!-- second tab -->
+          <div class="tab__content" id="lunch">
+            <div class="tab__content-holder">
+              <div class="tab__content-text">
+                <h3>
+                  Our Best <br />
+                  Lunch recipes
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias dignissimos sequi eaque quos fugiat reprehenderit
+                  vitae tempora quas expedita voluptas.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt esse sint fugiat illo porro, accusamus voluptatum
+                  temporibus perferendis ex, ipsum amet voluptas alias minima
+                  doloribus doloremque tempora culpa id libero!
+                </p>
+                <!-- <button class="btn">
+                </button> -->
+                <a href="recipe.html" class="btn">Go to recipes</a>
+              </div>
+              <div class="tab__content-image">
+                <img src="img/lunch2.jpg" alt="lunch" />
+              </div>
+            </div>
+          </div>
+          <!-- end second tab -->
+          <!-- third tab -->
+          <div class="tab__content" id="dinner">
+            <div class="tab__content-holder">
+              <div class="tab__content-text">
+                <h3>
+                  Our Best <br />
+                  Dinner recipes
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestias dignissimos sequi eaque quos fugiat reprehenderit
+                  vitae tempora quas expedita voluptas.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt esse sint fugiat illo porro, accusamus voluptatum
+                  temporibus perferendis ex, ipsum amet voluptas alias minima
+                  doloribus doloremque tempora culpa id libero!
+                </p>
+                <!-- <button class="btn">
+                </button> -->
+                <a href="recipe.html" class="btn">Go to recipes</a>
+              </div>
+              <div class="tab__content-image">
+                <img src="img/dinner2.jpg" alt="dinner" />
+              </div>
+            </div>
+          </div>
+          <!-- endthird tab -->
+        </div>
+      </div>
+    </section>
+    <!-- reviews -->
+    <section class="reviews container py">
+      <h2 class="section__title">What Our Users Say</h2>
+      <div class="reviews__container">
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="swiper__profile">
+                <div class="swiper__image">
+                  <img src="img/profile2.jpg" alt="women profile " />
+                </div>
+                <div class="swiper__info">
+                  <p class="swiper__name">Angelina Smith</p>
+                  <p class="swiper__adress">London, England</p>
+                </div>
+              </div>
+              <div class="swiper__text">
+                <p>
+                  &quot; Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit. Corporis eius, at illum doloribus sit voluptatum iste
+                  alias sunt aspernatur quia perferendis, provident adipisci ut
+                  exercitationem dolores non nemo sint molestias. Lorem ipsum
+                  dolor sit amet consectetur adipisicing elit. Sapiente, autem
+                  pariatur? Earum quo ab eos ullam iste quas, voluptates
+                  esse!&quot;
+                </p>
+              </div>
+            </div>
+            <!-- second slide -->
+            <div class="swiper-slide">
+              <div class="swiper__profile">
+                <div class="swiper__image">
+                  <img src="img/profile3.jpg" alt="women profile " />
+                </div>
+                <div class="swiper__info">
+                  <p class="swiper__name">Joe Doe</p>
+                  <p class="swiper__adress">Denver, USA</p>
+                </div>
+              </div>
+              <div class="swiper__text">
+                <p>
+                  &quot; Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit. Corporis eius, at illum doloribus sit voluptatum iste
+                  alias sunt aspernatur quia perferendis, provident adipisci ut
+                  exercitationem dolores non nemo sint molestias. Lorem ipsum
+                  dolor sit amet consectetur adipisicing elit. Sapiente, autem
+                  pariatur? Earum quo ab eos ullam iste quas, voluptates
+                  esse!&quot;
+                </p>
+              </div>
+            </div>
+            <!-- third slide -->
+            <div class="swiper-slide">
+              <div class="swiper__profile">
+                <div class="swiper__image">
+                  <img src="img/profile1.jpg" alt="women profile " />
+                </div>
+                <div class="swiper__info">
+                  <p class="swiper__name">Rene Khan</p>
+                  <p class="swiper__adress">Pariz, France</p>
+                </div>
+              </div>
+              <div class="swiper__text">
+                <p>
+                  &quot; Lorem ipsum dolor sit amet, consectetur adipisicing
+                  elit. Corporis eius, at illum doloribus sit voluptatum iste
+                  alias sunt aspernatur quia perferendis, provident adipisci ut
+                  exercitationem dolores non nemo sint molestias. Lorem ipsum
+                  dolor sit amet consectetur adipisicing elit. Sapiente, autem
+                  pariatur? Earum quo ab eos ullam iste quas, voluptates
+                  esse!&quot;
+                </p>
+              </div>
+            </div>
+            ...
+          </div>
+        </div>
+        <div class="swiper-button-prev">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="swiper-button-next">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      </div>
+    </section>
+    <!-- end reviews -->
+    <!-- recipes -->
+    <section class="recipes container py" id="recipe">
+      <h2 class="section__title">Our lates recipes</h2>
+      <div class="recipes__wrap">
+        <!-- first aricle -->
+
+        <article class="recipe__article">
+          <div class="recipes__article-img">
+            <img src="img/article1.jpg" alt="breakfast" />
+          </div>
+          <div class="recipes__article-text">
+            <p class="recipes__article-category">Breakfast</p>
+            <h3 class="recipes__article-heading">Hrono Breakfast</h3>
+            <a href="#">see more...</a>
+
+            <div class="recipes__article-info">
+              <div>
+                <i class="far fa-clock"></i>
+                <span>20-30 min.</span>
+              </div>
+              <div>
+                <span>15</span>
+                <i class="far fa-comment-dots"></i>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- end first aricle -->
+        <!-- second article -->
+        <article class="recipe__article">
+          <div class="recipes__article-img">
+            <img src="img/article2.jpg" alt="lunch" />
+          </div>
+          <div class="recipes__article-text">
+            <p class="recipes__article-category">lunch</p>
+            <h3 class="recipes__article-heading">Moroccan tajine</h3>
+            <a href="#">see more...</a>
+            <div class="recipes__article-info">
+              <div>
+                <i class="far fa-clock"></i>
+                <span>1 - 1h 30 min.</span>
+              </div>
+              <div>
+                <span>27</span>
+                <i class="far fa-comment-dots"></i>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- end second article -->
+        <!-- third article -->
+        <article class="recipe__article">
+          <div class="recipes__article-img">
+            <img src="img/article3.jpg" alt="dinner" />
+          </div>
+          <span class="badge">trending</span>
+          <div class="recipes__article-text">
+            <p class="recipes__article-category">dinner</p>
+            <h3 class="recipes__article-heading">Hrono dinner</h3>
+            <a href="#">see more...</a>
+            <div class="recipes__article-info">
+              <div>
+                <i class="far fa-clock"></i>
+                <span>30-45 min.</span>
+              </div>
+              <div>
+                <span>21</span>
+                <i class="far fa-comment-dots"></i>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- endthird article -->
+        <!-- href article -->
+        <a href="#" class="recipe__article recipe__article-link">
+          <p>start cooking</p>
+          <p>Check other recipes</p>
+        </a>
+        <!-- end href article -->
+      </div>
+    </section>
+    <!-- end recipes -->
+    <!-- popular section -->
+    <section class="popular">
+      <div class="popular__wraper container py">
+        <div class="popular__text">
+          <p class="badge">popular this week</p>
+          <h2 class="section__title">Best roast leg of lamb</h2>
+          <p class="popular__text-p">
+            This is without a doubt one of the best ways to cook a leg of lamb.
+            Cooking on a high heat gives you super-crispy potatoes but the lamb
+            is still juicy.
+          </p>
+          <div class="popular__text-ingredients">
+            <div>
+              <span>Ingredients :</span>
+              <ul>
+                <li>2 kg leg of lamb or hogget</li>
+                <li>1 bulb of garlic</li>
+                <li>1/2 a bunch of fresh rosemary</li>
+                <li>1.5 kg potatoes</li>
+                <li>1 lemon</li>
+                <li>olive oil</li>
+              </ul>
+            </div>
+            <div class="popular__text-ul2">
+              <span>Mint Sauce :</span>
+              <ul>
+                <li>1 bunch of fresh mint</li>
+                <li>1 teaspoon sugar</li>
+                <li>3 tablespoons wine vinegar</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#" class="btn">Read full recipe</a>
+        </div>
+      </div>
+    </section>
+    <!-- end popular section -->
+    <!-- marketing section -->
+    <section class="marketing py container">
+      <p class="marketing__p">make the right choice and cook with us</p>
+      <div class="marketing__cta" id="contact">
+        <h3>Subcribe to our Newsletters</h3>
+        <form>
+          <div class="marketing__cta-input">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email address"
+            />
+          </div>
+          <div class="marketing__cta-btn">
+            <button class="btn">Subscribe</button>
+          </div>
+        </form>
+        <p>We will not share your information with anyone</p>
+      </div>
+    </section>
+    <!-- end marketing section -->
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_text">
+          <div class="footer__first-column">
+            <div class="nav__mobile-logo">
+              <a href="index.html">
+                <img src="img/logo-white.png" alt="logo" />
+              </a>
+            </div>
+            <p class="footer__first-columnP1">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
+              culpa aspernatur totam officia obcaecati facere asperiores unde
+              dolorum aperiam. Laboriosam unde tempora totam quo enim!
+            </p>
+            <p>T: <a href="tel:+44-785-7895">+44-785-7895</a></p>
+            <address>
+              E:
+              <a href="mailto:foodpasion@example.com">foodpasion@example.com</a>
+            </address>
+          </div>
+          <div class="footer__second-column">
+            <h4>Popular Recipes</h4>
+            <ul>
+              <li><a href="#">Hrono Breakfast</a></li>
+              <li><a href="#">France Brodet</a></li>
+              <li><a href="#">Marocan Tajin</a></li>
+              <li><a href="#">Grilled Lamb</a></li>
+            </ul>
+          </div>
+          <div class="footer__third-column">
+            <h4>Popular Recipes</h4>
+            <ul>
+              <li class="nav__single-link"><a href="index.html">Home</a></li>
+              <li class="nav__single-link">
+                <a href="#chiefInspiration">Chief Inspiration</a>
+              </li>
+              <li class="nav__single-link"><a href="#recipe">Recipes</a></li>
+              <li class="nav__single-link"><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer_copyright">
+        <p>&copy; Copyright Food Passion. All rights reserved</p>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

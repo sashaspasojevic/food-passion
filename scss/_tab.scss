@@ -1,0 +1,85 @@
+@import "var";
+@import "mixins";
+
+.tab {
+  font-size: 1.2rem;
+  .tab__subtitle {
+    font-size: 1.3rem;
+    margin: 20px 0 80px 0;
+    text-align: center;
+  }
+}
+
+.tab__header {
+  display: flex;
+  justify-content: center;
+}
+
+.tab__content-holder {
+  display: flex;
+  padding-top: 70px;
+  @include breakpoint(phone) {
+    flex-direction: column;
+  }
+}
+
+.tab__content-text {
+  flex: 0 0 70%;
+  h3 {
+    font-size: 2.1rem;
+    color: $colorFont;
+  }
+  p {
+    margin: 30px 0;
+    max-width: 90%;
+  }
+  .btn {
+    margin-top: 50px;
+  }
+  @include breakpoint(phone) {
+    order: 1;
+  }
+}
+
+.tab__content-image {
+  flex: 0 0 30%;
+  @include breakpoint(phone) {
+    margin-bottom: 70px;
+  }
+}
+
+.tab__btn {
+  flex: 0 30%;
+  position: relative;
+  top: 1px;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  transition: $transition;
+  border-bottom: 4px solid rgba($color: $colorFont, $alpha: 0.4);
+  color: rgba($color: $colorFont, $alpha: 0.6);
+  @include breakpoint(phone) {
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  &.tab__active {
+    color: $colorFont;
+    border-bottom: 4px solid $colorFont;
+  }
+}
+
+.tab__body {
+  padding: 0.5rem 1rem;
+}
+
+.tab__content {
+  display: none;
+  &.tab__active {
+    display: block;
+  }
+}

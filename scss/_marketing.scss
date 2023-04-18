@@ -1,0 +1,89 @@
+@import "var";
+@import "mixins";
+
+$fontFamily1: "Edu NSW ACT Foundation", cursive;
+$fontFamily2: "Cookie", cursive;
+
+$color1: #06aed5;
+$color2: #086788;
+$color3: #f2f4f3;
+$color4: #f0c808;
+$colorFont: #436e53;
+$white: #fff;
+$black: #000;
+$spacing: 0.1rem;
+$transition: all 0.3s linear;
+
+.marketing {
+  position: relative;
+}
+
+.marketing__p {
+  text-transform: uppercase;
+  margin: 0 auto 100px;
+  text-align: center;
+  font-size: 2rem;
+  color: rgba($black, 0.45);
+  @include breakpoint(phone) {
+    margin: 0 auto 150px;
+  }
+}
+
+.marketing__cta {
+  border-radius: 15px;
+  h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  position: absolute;
+  width: 70%;
+  bottom: 0;
+  left: 50%;
+
+  transform: translate(-50%, 50%);
+  background: $color3;
+  z-index: 10;
+  padding: 35px 50px;
+  @include breakpoint(tablet) {
+    padding: 15px 20px;
+    width: 85%;
+  }
+
+  @include breakpoint(phone) {
+    width: 85%;
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include breakpoint(phone) {
+      display: block;
+    }
+    .marketing__cta-input {
+      flex: 0 0 70%;
+    }
+    .btn {
+      flex: 0 0 30%;
+      //       @include breakpoint(phone) {
+      //         margin: 20px auto !important;
+      //       }
+    }
+
+    .marketing__cta-btn {
+      @include breakpoint(phone) {
+        text-align: center;
+      }
+    }
+    input {
+      font-size: 14px;
+      width: 100%;
+      letter-spacing: 2px;
+      padding: 20px 30px;
+      border: 1px solid $color2;
+      border-radius: 50px;
+    }
+  }
+}
